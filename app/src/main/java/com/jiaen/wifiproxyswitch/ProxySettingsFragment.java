@@ -73,11 +73,13 @@ public class ProxySettingsFragment extends Fragment implements View.OnClickListe
                 if (!onProxy) {
                     setWiFiProxySettings();
                     buttonSetProxy.setText(PROMPT_2);
-                    SharedPreferenceUtil.put(context, "onProxy", true);
+                    onProxy = !onProxy;
+                    SharedPreferenceUtil.put(context, "onProxy", onProxy);
                 } else {
                     unsetWiFiProxySettings();
                     buttonSetProxy.setText(PROMPT_1);
-                    SharedPreferenceUtil.put(context, "onProxy", false);
+                    onProxy = !onProxy;
+                    SharedPreferenceUtil.put(context, "onProxy", onProxy);
                 }
                 break;
         }
