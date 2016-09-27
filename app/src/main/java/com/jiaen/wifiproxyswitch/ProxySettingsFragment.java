@@ -72,14 +72,8 @@ public class ProxySettingsFragment extends Fragment implements View.OnClickListe
             case R.id.set_wifi_proxy_settings:
                 if (!onProxy) {
                     setWiFiProxySettings();
-                    buttonSetProxy.setText(PROMPT_2);
-                    onProxy = !onProxy;
-                    SharedPreferenceUtil.put(context, "onProxy", onProxy);
                 } else {
                     unsetWiFiProxySettings();
-                    buttonSetProxy.setText(PROMPT_1);
-                    onProxy = !onProxy;
-                    SharedPreferenceUtil.put(context, "onProxy", onProxy);
                 }
                 break;
         }
@@ -96,6 +90,9 @@ public class ProxySettingsFragment extends Fragment implements View.OnClickListe
         }
         boolean b = wiFiProxyUtil.setWiFiProxySettings(ip, Integer.valueOf(port));
         if (b) {
+            buttonSetProxy.setText(PROMPT_2);
+            onProxy = !onProxy;
+            SharedPreferenceUtil.put(context, "onProxy", onProxy);
             onProxySettingFinished.onProxySetSuccess();
         } else {
             onProxySettingFinished.onProxySetError();
@@ -105,6 +102,9 @@ public class ProxySettingsFragment extends Fragment implements View.OnClickListe
     private void unsetWiFiProxySettings() {
         boolean b = wiFiProxyUtil.unsetWiFiProxySettings();
         if (b) {
+            buttonSetProxy.setText(PROMPT_1);
+            onProxy = !onProxy;
+            SharedPreferenceUtil.put(context, "onProxy", onProxy);
             onProxySettingFinished.onProxySetSuccess();
         } else {
             onProxySettingFinished.onProxySetError();
