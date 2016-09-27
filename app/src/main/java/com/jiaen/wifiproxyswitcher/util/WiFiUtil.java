@@ -1,4 +1,4 @@
-package com.jiaen.wifiproxyswitch.util;
+package com.jiaen.wifiproxyswitcher.util;
 
 import android.content.Context;
 import android.net.wifi.WifiConfiguration;

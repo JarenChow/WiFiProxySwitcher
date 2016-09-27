@@ -16,6 +16,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:text="在这里进行 WiFi Http Proxy 设置"
             android:textSize="18sp" />
 

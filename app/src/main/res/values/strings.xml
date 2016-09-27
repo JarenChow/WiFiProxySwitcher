@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WiFiProxySwitch</string>
+    <string name="app_name">WiFiProxySwitcher</string>
     <string-array name="wifi_cipher_type">
         <item>加密方式: WPA</item>
         <item>加密方式: WEP</item>

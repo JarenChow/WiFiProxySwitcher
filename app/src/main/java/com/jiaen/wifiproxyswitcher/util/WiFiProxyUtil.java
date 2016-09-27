@@ -1,4 +1,4 @@
-package com.jiaen.wifiproxyswitch.util;
+package com.jiaen.wifiproxyswitcher.util;
 
 
 import android.annotation.TargetApi;

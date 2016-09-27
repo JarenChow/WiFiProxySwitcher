@@ -1,4 +1,4 @@
-package com.jiaen.wifiproxyswitch;
+package com.jiaen.wifiproxyswitcher;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,9 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.jiaen.wifiproxyswitch.util.SharedPreferenceUtil;
-import com.jiaen.wifiproxyswitch.util.ToastUtil;
-import com.jiaen.wifiproxyswitch.util.WiFiProxyUtil;
+import com.jiaen.wifiproxyswitcher.util.SharedPreferenceUtil;
+import com.jiaen.wifiproxyswitcher.util.ToastUtil;
+import com.jiaen.wifiproxyswitcher.util.WiFiProxyUtil;
 
 public class ProxySettingsFragment extends Fragment implements View.OnClickListener {
 

@@ -1,4 +1,4 @@
-package com.jiaen.wifiproxyswitch;
+package com.jiaen.wifiproxyswitcher;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,8 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.jiaen.wifiproxyswitch.util.ToastUtil;
-import com.jiaen.wifiproxyswitch.util.WiFiUtil;
+import com.jiaen.wifiproxyswitcher.util.ToastUtil;
+import com.jiaen.wifiproxyswitcher.util.WiFiUtil;
 
 public class WiFiConnectionFragment extends Fragment implements View.OnClickListener {
 
