@@ -87,6 +87,8 @@ public class WiFiProxyUtil {
 
             // 保存设置
             manager.updateNetwork(config);
+            manager.disconnect();
+            manager.reconnect();
 
             ToastUtil.showToast(context, "保存Proxy设置成功");
             return true;
@@ -128,6 +130,8 @@ public class WiFiProxyUtil {
 
             // 保存设置
             manager.updateNetwork(config);
+            manager.disconnect();
+            manager.reconnect();
 
             ToastUtil.showToast(context, "取消Proxy设置成功");
             return true;
@@ -205,6 +209,10 @@ public class WiFiProxyUtil {
             if (result.substring(start, start + 4).equals("NONE")) {
                 throw new RuntimeException("Can't update the Network, you should have the right WifiConfiguration");
             }
+
+            manager.disconnect();
+            manager.reconnect();
+
             ToastUtil.showToast(context, "保存Proxy设置成功");
             return true;
         } catch (Exception e) {
@@ -235,6 +243,8 @@ public class WiFiProxyUtil {
             setProxy.invoke(config, methodParams);
 
             manager.updateNetwork(config);
+            manager.disconnect();
+            manager.reconnect();
 
             ToastUtil.showToast(context, "取消Proxy设置成功");
             return true;
@@ -264,6 +274,8 @@ public class WiFiProxyUtil {
                 if (nID == config.networkId && ssid.equals(config.SSID)) {
                     setProxy.invoke(config, psts.getEnumConstants()[1], pinfoConstructor.newInstance(ip, port, null));
                     manager.updateNetwork(config);
+                    manager.disconnect();
+                    manager.reconnect();
                     break;
                 }
             }
